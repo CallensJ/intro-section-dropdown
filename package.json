@@ -1,0 +1,26 @@
+{
+  "name": "intro-section-with-dropdown-navigation-main",
+  "version": "1.0.0",
+  "description": "frontend mentor challenge intro section with dropdown menu",
+  "main": "index.html",
+  "scripts": {
+   
+    "watch:sass": "node-sass styles/main.scss css/style.css -w",
+    "compile:sass": "node-sass styles/main.scss css/style.comp.css",
+    "start": "npm-run-all --parallel watch:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CallensJ/intro-section-dropdown.git"
+  },
+  "author": "callens johan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CallensJ/intro-section-dropdown/issues"
+  },
+  "homepage": "https://github.com/CallensJ/intro-section-dropdown#readme",
+  "dependencies": {
+    "node-sass": "^9.0.0",
+    "npm-run-all": "^4.1.5"
+  }
+}
