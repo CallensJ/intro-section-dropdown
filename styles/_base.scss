@@ -1,7 +1,44 @@
+$Almost-White: hsl(0, 0%, 98%);
+$Medium-Gray: hsl(0, 0%, 41%);
+$Almost-Black: hsl(0, 0%, 8%);
+
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  background-color: $Almost-White;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: $Medium-Gray;
+  font-size: 1.2rem;
+}
+a:hover {
+  color: $Almost-Black;
+}
+
+.btn {
+  padding: 0.8rem 1.8rem;
+  border: none;
+  background: transparent;
+}
+.btn--login {
+  outline: none;
+}
+.btn--register {
+  background: transparent;
+  border-radius: 1rem;
+  border: 0.1rem solid $Almost-Black;
+  margin-left: 2rem;
 }
