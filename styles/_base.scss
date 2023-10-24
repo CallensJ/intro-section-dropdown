@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
 $Almost-White: hsl(0, 0%, 98%);
 $Medium-Gray: hsl(0, 0%, 41%);
 $Almost-Black: hsl(0, 0%, 8%);
 
+
+//general
 *,
 *::before,
 *::after {
@@ -11,34 +14,68 @@ $Almost-Black: hsl(0, 0%, 8%);
 }
 body {
   background-color: $Almost-White;
+  
 }
+
 html {
-  box-sizing: border-box;
   font-size: 62.5%;
+  font-family: "Epilogue", sans-serif;
+}
+#hero-section{
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100vh;
 }
 li {
   list-style-type: none;
 }
-a {
-  text-decoration: none;
-  color: $Medium-Gray;
-  font-size: 1.2rem;
-}
-a:hover {
+
+.navbar__list li:hover{
   color: $Almost-Black;
 }
 
+a {
+  text-decoration: none;
+  color: $Medium-Gray;
+  font-size: 1.4rem;
+}
+a:hover,
+.btn-login:hover,
+.btn-register:hover {
+  color: $Almost-Black;
+}
 .btn {
-  padding: 0.8rem 1.8rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 1rem;
+  outline: none;
   border: none;
   background: transparent;
+  cursor: pointer;
 }
-.btn--login {
-  outline: none;
+.btn-register,
+.btn-login {
+  color: $Medium-Gray;
 }
-.btn--register {
-  background: transparent;
-  border-radius: 1rem;
+.btn-register {
+  border: 0.1rem solid $Medium-Gray;
+}
+.btn-register:hover {
   border: 0.1rem solid $Almost-Black;
-  margin-left: 2rem;
+}
+.overbackground {
+  background-color: hsla(0, 0%, 8%, 0.76);
+}
+
+
+
+//my custom styles
+
+.flex{
+  display: flex;
+}
+.jc-sb{
+  justify-content: space-between;
+}
+.ai-c{
+  align-items: center;
 }

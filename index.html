@@ -17,47 +17,170 @@
   </head>
   <body>
     <section id="hero-section">
-      <nav role="navigation" class="navbar">
-        <div class="navbar-left">
-          <h2 class="navbar__logo">snap</h2>
-          <ul class="navbar__list">
-            <li>
-              <a href="#" alt="">Features</a>
-              <ul class="dropdown">
-                <li>
-                  <img src="./images/icon-todo.svg" /><a href="#">Todo List</a>
+      <nav role="navigation" id="desktop-navbar" class="flex jc-sb ai-c">
+        <div id="desktop-navbar-left" class="flex jc-sb ai-c">
+          <img src="./images/logo.svg" alt="" class="navbar__logo" />
+          <ul class="navbar__list flex jc-sb">
+            <li class="desktop-navbar-link-btn" onclick="toggleDropdown('dropdown-one')">
+              <a href="#"
+                >Features<img
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  class="arrow-down"
+              /></a>
+              <ul class="desktop-dropdown-menu one" id="dropdown-one">
+                <li class="desktop-dropdown-item">
+                  <img
+                    src="./images/icon-todo.svg"
+                    alt=""
+                    class="dropdown-menu-icon"
+                  /><a href="#">Todo List</a>
+                  
                 </li>
-                <li>
-                  <img src="./images/icon-calendar.svg" /><a href="#"
-                    >Calendars</a
-                  >
+                <li class="desktop-dropdown-item">
+                  <img
+                    src="./images/icon-calendar.svg"
+                    alt=""
+                    class="dropdown-menu-icon"
+                  />
+                  <a href="#">Calendar</a>
                 </li>
-                <li>
-                  <img src="./images/icon-reminders.svg" /><a href="#"
-                    >Reminders</a
-                  >
+                <li class="desktop-dropdown-item">
+                  <img
+                    src="./images/icon-reminders.svg"
+                    alt=""
+                    class="dropdown-menu-icon"
+                  /><a href="#">Reminders</a>
+               
                 </li>
-                <li>
-                  <img src="./images/icon-planning.svg" /><a href="#"
-                    >Planning</a
-                  >
+                <li class="desktop-dropdown-item">
+                  <img
+                    src="./images/icon-planning.svg"
+                    alt=""
+                    class="dropdown-menu-icon"
+                  />
+                  <a href="#">Planning</a>
+                  
+                  
                 </li>
               </ul>
             </li>
-            <li><a href="#" alt="">Company</a></li>
-            <li><a href="#" alt="">Careers</a></li>
-            <li><a href="#" alt="">About</a></li>
+            <li class="desktop-navbar-link-btn" onclick="toggleDropdown('dropdown-two')">
+              <a href="#"
+                >Company<img
+                  src="./images/icon-arrow-down.svg"
+                  alt=""
+                  class="arrow-down"
+              /></a>
+              <ul class="desktop-dropdown-menu two" id="dropdown-two">
+                <li class="desktop-dropdown-item"><a href="#">History</a></li>
+                <li class="desktop-dropdown-item"><a href="#">Our Team</a></li>
+                <li class="desktop-dropdown-item"><a href="#">Blog</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
           </ul>
         </div>
 
-        <div>
-          <button class="btn btn--login">Login</button>
-          <button class="btn btn--register">Register</button>
+        <div class="buttons">
+          <a href="#" class="btn btn-login">Login</a>
+          <a href="#" class="btn btn-register">Register</a>
+        </div>
+        <div class="toggle-buttons">
+          <img src="./images/icon-menu.svg" alt="" />
         </div>
       </nav>
+      <!--====== mobile navbar ======-->
+      <nav role="navigation" id="mobile-navbar">
+        <ul class="navbar__list">
+          <li class="mobile-navbar-link-btn" onclick="toggleDropdown('dropdown-three')">
+            <a href="#"
+              >Features<img
+                src="./images/icon-arrow-down.svg"
+                alt=""
+                class="arrow-down"
+            /></a>
+            <ul class="mobile-dropdown-menu" id="dropdown-three">
+              <li>
+                <img
+                  src="./images/icon-todo.svg"
+                  alt=""
+                  class="dropdown-menu-icon"
+                />
+                <a href="#">Todo List</a>
+              </li>
+              <li>
+                <img
+                  src="./images/icon-calendar.svg"
+                  alt=""
+                  class="dropdown-menu-icon"
+                /> <a ref="#">Calendar</a>
+              </li>
+              <li>
+                <img
+                  src="./images/icon-reminders.svg"
+                  alt=""
+                  class="dropdown-menu-icon"
+                /><a href="#">Reminders</a>
+                
+              </li>
+              <li>
+                <img
+                  src="./images/icon-planning.svg"
+                  alt=""
+                  class="dropdown-menu-icon"
+                /> <a href="#">Planning</a>
+              </li>
+            </ul>
+          </li>
+          <li class="mobile-navbar-link-btn" onclick="toggleDropdown('dropdown-four')">
+            <a href="#"
+              >Company<img
+                src="./images/icon-arrow-down.svg"
+                alt=""
+                class="arrow-down"
+            /></a>
+            <ul class="mobile-dropdown-menu" id="dropdown-four">
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <div class="buttons-mobile">
+          <a href="#" class="btn btn-login">Login</a>
+          <a href="#" class="btn btn-register">Register</a>
+        </div>
+      </nav>
+      <main>
+          <div class="left">
+            <div class="container">
 
-      <div class="bloc-1"></div>
-      <div class="bloc-2"></div>
+              <h1 class="title">Make remote work</h1>
+              <p class="paragraph">Get your team in sync, no matter your location. 
+                Steamline processes, create team rituals, and watch productivity soar.
+  
+              </p>
+              <button class="main-btn">Learn more</button>
+              <div class="partners-logos">
+                <img src="./images/client-databiz.svg" alt=""/>
+                <img src="./images/client-audiophile.svg" alt=""/>
+                <img src="./images/client-meet.svg" alt=""/>
+                <img src="./images/client-maker.svg" alt=""/>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+         
+            
+
+          </div>
+      </main>
     </section>
+
+    <script src="index.js"></script>
   </body>
 </html>
