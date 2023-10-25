@@ -42,7 +42,6 @@
 
 /*====== DESKTOP NAVBAR ====== */
 #desktop-navbar {
-  
   padding: 0 4rem;
   height: 7rem;
   position: relative;
@@ -59,6 +58,7 @@
   position: absolute;
   top: 7rem;
 }
+
 .desktop-dropdown-item {
   padding: 0 2.5rem;
   margin-top: 2rem;
@@ -141,11 +141,10 @@
 
   #mobile-navbar {
     display: initial;
-    .buttons-mobile{
+    .buttons-mobile {
       display: flex;
       flex-direction: column;
       text-align: center;
-    
     }
   }
 }
