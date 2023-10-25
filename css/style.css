@@ -1,10 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: border-box; }
 
 body {
   background-color: #fafafa; }
@@ -52,6 +50,23 @@ a:hover,
 .btn-register:hover {
   border: 0.1rem solid #141414; }
 
+.main-btn {
+  background-color: #141414;
+  color: #fafafa;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  margin-top: 6rem;
+  margin-bottom: 11rem;
+  cursor: pointer;
+  border: none; }
+
+.main-btn:hover {
+  background: transparent;
+  color: #141414;
+  border: 1px solid #141414;
+  transition: .3s; }
+
 .overbackground {
   background-color: rgba(20, 20, 20, 0.76); }
 
@@ -63,6 +78,9 @@ a:hover,
 
 .ai-c {
   align-items: center; }
+
+.grid {
+  display: grid; }
 
 /* ====== DISPLAY / HIDE / ACTIVES ELEMENTS ====== */
 /* mobile */
@@ -173,4 +191,68 @@ a:hover,
     z-index: 1; }
   /* mobile-navbar */
   #mobile-navbar {
-    display: initial; } }
+    display: initial; }
+    #mobile-navbar .buttons-mobile {
+      display: flex;
+      flex-direction: column;
+      text-align: center; } }
+
+.mobileImg {
+  display: none; }
+
+main {
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  grid-template-rows: auto;
+  gap: 1rem;
+  overflow: hidden; }
+  main .left .container {
+    text-align: left;
+    margin-top: 16rem;
+    margin-left: 17rem; }
+    main .left .container .title {
+      font-size: 7.3rem; }
+      main .left .container .title span {
+        display: block; }
+    main .left .container .paragraph {
+      max-width: 42rem;
+      margin-top: 7rem;
+      font-size: 1.8rem;
+      color: dimgray;
+      line-height: 2.6rem; }
+    main .left .container .partners-logos {
+      width: 47.6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+  main .illustration {
+    width: 100%;
+    margin-top: 6rem;
+    margin-left: 10rem; }
+    main .illustration .desktopImg {
+      object-fit: cover;
+      height: 635px; }
+
+@media (max-width: 992px) {
+  main .left {
+    grid-row: 2; }
+    main .left .container {
+      margin: 0;
+      text-align: center;
+      width: 375px; }
+      main .left .container .title {
+        font-size: 3.6rem; }
+      main .left .container span {
+        display: inline !important; }
+    main .left .partners-logos {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 375px !important; }
+      main .left .partners-logos img {
+        height: 1.6rem; }
+  main .right .illustration {
+    margin-left: 0rem; }
+    main .right .illustration .desktopImg {
+      display: none; }
+    main .right .illustration .mobileImg {
+      width: 100%;
+      display: initial; } }

@@ -5,12 +5,10 @@ $Almost-Black: hsl(0, 0%, 8%);
 
 
 //general
-*,
-*::before,
-*::after {
+*{
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 body {
   background-color: $Almost-White;
@@ -62,6 +60,23 @@ a:hover,
 .btn-register:hover {
   border: 0.1rem solid $Almost-Black;
 }
+.main-btn{
+  background-color: $Almost-Black;
+  color: $Almost-White;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  margin-top: 6rem;
+  margin-bottom: 11rem;
+  cursor: pointer;
+  border: none;
+}
+.main-btn:hover{
+  background:transparent;
+  color: $Almost-Black;
+  border: 1px solid $Almost-Black;
+  transition: .3s;
+}
 .overbackground {
   background-color: hsla(0, 0%, 8%, 0.76);
 }
@@ -78,4 +93,7 @@ a:hover,
 }
 .ai-c{
   align-items: center;
+}
+.grid{
+  display: grid;
 }

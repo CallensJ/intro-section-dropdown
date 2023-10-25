@@ -141,5 +141,11 @@
 
   #mobile-navbar {
     display: initial;
+    .buttons-mobile{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    
+    }
   }
 }
